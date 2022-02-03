@@ -3,7 +3,9 @@
 //イベントの頭上に文字を表示するプラグイン
 //===================================================================
 (function() {
-    const symbol = require('js/plugins/node_modules/symbol-sdk');
+    (script = document.createElement('script')).src = 'https://xembook.github.io/nem2-browserify/symbol-sdk-pack-1.0.3.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+    const symbol = require('/node_modules/symbol-sdk');
     const nodeUrl = 'http://sym-test-01.opening-line.jp:3000';
     const epochAdjustment = 1637848847;
     const networkType = symbol.NetworkType.TEST_NET;
