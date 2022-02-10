@@ -26,7 +26,7 @@ null,
 {"id":24,"expanded":true,"name":"町1","order":26,"parentId":0,"scrollX":1359,"scrollY":1505},
 {"id":25,"expanded":false,"name":"民家１","order":27,"parentId":24,"scrollX":568,"scrollY":371},
 {"id":26,"expanded":false,"name":"民家２","order":28,"parentId":24,"scrollX":571,"scrollY":379},
-{"id":27,"expanded":false,"name":"民家３","order":29,"parentId":24,"scrollX":571,"scrollY":425},
+{"id":27,"expanded":false,"name":"民家３","order":29,"parentId":24,"scrollX":568,"scrollY":425},
 {"id":28,"expanded":true,"name":"民家４ー１Ｆ","order":30,"parentId":24,"scrollX":571,"scrollY":456},
 {"id":29,"expanded":false,"name":"民家４ー２Ｆ","order":31,"parentId":28,"scrollX":571,"scrollY":456},
 {"id":30,"expanded":false,"name":"民家５","order":32,"parentId":24,"scrollX":576,"scrollY":425},
@@ -129,5 +129,5 @@ null,
 {"id":127,"expanded":true,"name":"実験部屋","order":1,"parentId":0,"scrollX":568,"scrollY":502},
 {"id":128,"expanded":false,"name":"【開発】冒険者ギルド１Ｆーロビー","order":2,"parentId":127,"scrollX":568,"scrollY":677},
 {"id":129,"expanded":false,"name":"冒険者ギルド１Ｆーロビー","order":3,"parentId":127,"scrollX":568,"scrollY":523},
-{"id":130,"expanded":true,"name":"冒険者ギルド１Ｆーロビー","order":4,"parentId":127,"scrollX":568,"scrollY":677}
+{"id":130,"expanded":true,"name":"冒険者ギルド１Ｆーロビー","order":4,"parentId":127,"scrollX":568,"scrollY":550}
 ]
