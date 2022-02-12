@@ -16,6 +16,7 @@ var $plugins =
 {"name":"CommonInterceptor","status":true,"description":"割り込みコモンイベントプラグイン","parameters":{"ニューゲームコモン":"11","ロードコモン":"12","メニューコモン":"0"}},
 {"name":"TMNamePop2","status":true,"description":"イベントの頭上に文字列を表示する機能を追加します。","parameters":{"backOpacity":"96","fontSize":"20","outlineWidth":"4","outlineColor":"rgba(0, 0, 0, 0.5)","width":"160","roundRectRadius":"6"}},
 {"name":"EventCommandByCode","status":true,"description":"コードとパラメータを指定してイベントコマンドを実行します。","parameters":{}},
-{"name":"MVJoint","status":true,"description":"ツクールMZ上でMVのプラグインを無理やり動かします。","parameters":{}},
-{"name":"DTextPicture","status":true,"description":"動的文字列ピクチャ生成プラグイン","parameters":{"itemIconSwitchId":"0","lineSpacingVariableId":"0","frameWindowSkin":"","frameWindowPadding":"18","padCharacter":"0","prefixText":""}}
+{"name":"MVJoint","status":false,"description":"ツクールMZ上でMVのプラグインを無理やり動かします。","parameters":{}},
+{"name":"DTextPicture","status":true,"description":"動的文字列ピクチャ生成プラグイン","parameters":{"itemIconSwitchId":"0","lineSpacingVariableId":"0","frameWindowSkin":"","frameWindowPadding":"18","padCharacter":"0","prefixText":""}},
+{"name":"HyperLink","status":true,"description":"ゲーム中に外部ページへのリンクを貼ります。","parameters":{"description":"Webサイトへのリンク"}}
 ];
