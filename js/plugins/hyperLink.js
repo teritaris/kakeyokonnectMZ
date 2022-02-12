@@ -49,6 +49,7 @@
             window.RPGAtsumaru.popups.openLink(url);
         } else if (this._errorPrinter) {
             var link = '<a href="' + url + '" target="_blank" id="HyperLink" style="background-color: #eee;border-radius: 1em;">' + title + '</a>';
+            // var link = '<img id="HyperLink" class="alignnone size-full wp-image-4655" src="https://media.ceres-inc.jp/news/2022/01/コーポレート画像.jpg" alt="" width="877" height="457">';
             this._errorPrinter.innerHTML = this._makeErrorHtml(description, link);
             var a = document.getElementById('HyperLink');
             a.addEventListener('mousedown', stopPropagation);
