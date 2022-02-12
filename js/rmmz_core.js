@@ -855,8 +855,11 @@ Graphics._makeErrorHtml = function(name, message /*, error*/) {
     const messageDiv = document.createElement("div");
     nameDiv.id = "errorName";
     messageDiv.id = "errorMessage";
-    nameDiv.innerHTML = Utils.escapeHtml(name || "");
-    messageDiv.innerHTML = Utils.escapeHtml(message || "");
+    // nameDiv.innerHTML = Utils.escapeHtml(name || "");
+    // messageDiv.innerHTML = Utils.escapeHtml(message || "");
+    nameDiv.innerHTML = name || "";
+    messageDiv.innerHTML = message || "";
+
     return nameDiv.outerHTML + messageDiv.outerHTML;
 };
 

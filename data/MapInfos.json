@@ -126,7 +126,7 @@ null,
 {"id":124,"expanded":false,"name":"風の洞窟内部３","order":92,"parentId":119,"scrollX":1109,"scrollY":1459},
 {"id":125,"expanded":false,"name":"風の洞窟内部４","order":93,"parentId":119,"scrollX":811,"scrollY":907},
 {"id":126,"expanded":true,"name":"マネキンルーム","order":40,"parentId":37,"scrollX":568,"scrollY":569},
-{"id":127,"expanded":true,"name":"実験部屋","order":1,"parentId":0,"scrollX":568,"scrollY":502},
+{"id":127,"expanded":true,"name":"実験部屋","order":1,"parentId":0,"scrollX":575,"scrollY":502},
 {"id":128,"expanded":false,"name":"【開発】冒険者ギルド１Ｆーロビー","order":2,"parentId":127,"scrollX":568,"scrollY":677},
 {"id":129,"expanded":false,"name":"冒険者ギルド１Ｆーロビー","order":3,"parentId":127,"scrollX":568,"scrollY":523},
 {"id":130,"expanded":true,"name":"冒険者ギルド１Ｆーロビー","order":4,"parentId":127,"scrollX":568,"scrollY":550}

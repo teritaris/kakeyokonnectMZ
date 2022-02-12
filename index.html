@@ -11,63 +11,70 @@
         <title>異世界転生したら法定通貨がXYMだった件</title>
     </head>
     <body style="background-color: black">
+        <p>p要素1</p>
+
 <!--    <script>-->
 <!--        (script = document.createElement('script')).src = 'https://xembook.github.io/nem2-browserify/symbol-sdk-1.0.3.js';-->
 <!--        document.getElementsByTagName('head')[0].appendChild(script);-->
 <!--    </script>-->
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+    </script>
     <script>
-        (script = document.createElement('script')).src = 'https://xembook.github.io/nem2-browserify/symbol-sdk-1.0.3.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-        NODE = "https://symbol-node.teritaris.net:3001";
-        sym = require("/node_modules/symbol-sdk");
-        op  = require("/node_modules/rxjs/operators");
-        rxjs = require("/node_modules/rxjs");
-        cat = require("/node_modules/catbuffer-typescript");
-        sha3_256 = require('/node_modules/js-sha3').sha3_256;
-        sha256 = require('/node_modules/js-sha256').sha256;
-
-        //repository
-        repo = new sym.RepositoryFactoryHttp(NODE);
-        accountRepo = repo.createAccountRepository();
-        txRepo = repo.createTransactionRepository();
-        tsRepo = repo.createTransactionStatusRepository();
-        receiptRepo = repo.createReceiptRepository();
-        nwRepo = repo.createNetworkRepository();
-        blockRepo = repo.createBlockRepository();
-        chainRepo = repo.createChainRepository();
-        nodeRepo = repo.createNodeRepository();
-        finRepo = repo.createFinalizationRepository();
-        nsRepo = repo.createNamespaceRepository();
-        metaRepo = repo.createMetadataRepository();
-        mosaicRepo = repo.createMosaicRepository();
-        msigRepo = repo.createMultisigRepository();
-        hlRepo = repo.createHashLockRepository();
-        slRepo = repo.createSecretLockRepository();
-        resAccountRepo = repo.createRestrictionAccountRepository();
-        resMosaicRepo = repo.createRestrictionMosaicRepository();
-
-        //properties
-        (async() =>{
-            epochAdjustment = await repo.getEpochAdjustment().toPromise();
-            generationHash = await repo.getGenerationHash().toPromise();
-            currencyId = (await repo.getCurrencies().toPromise()).currency.mosaicId.toHex();
-            networkCurrency = (await repo.getCurrencies().toPromise()).currency;
-            networkType = await repo.getNetworkType().toPromise();
-            transactionFees = await nwRepo.getTransactionFees().toPromise();
-            averageFeeMultiplier = transactionFees.averageFeeMultiplier;
-            medianFeeMultiplier = transactionFees.medianFeeMultiplier;
-            minFeeMultiplier = transactionFees.minFeeMultiplier;
-        })();
-
-        //service
-        transactionService = new sym.TransactionService(txRepo, receiptRepo);
-        stateProofService = new sym.StateProofService(repo);
-        metaService = new sym.MetadataTransactionService(metaRepo);
-        mosaicResService = new sym.MosaicRestrictionTransactionService(resMosaicRepo,nsRepo)
-
-        //listener
-        wsEndpoint = NODE.replace('http', 'ws') + "/ws";
-        listener = new sym.Listener(wsEndpoint,nsRepo,WebSocket);
+        // (script = document.createElement('script')).src = 'https://xembook.github.io/nem2-browserify/symbol-sdk-1.0.3.js';
+        // document.getElementsByTagName('head')[0].appendChild(script);
+        // NODE = "https://symbol-node.teritaris.net:3001";
+        // sym = require("/node_modules/symbol-sdk");
+        // op  = require("/node_modules/rxjs/operators");
+        // rxjs = require("/node_modules/rxjs");
+        // cat = require("/node_modules/catbuffer-typescript");
+        // sha3_256 = require('/node_modules/js-sha3').sha3_256;
+        // sha256 = require('/node_modules/js-sha256').sha256;
+        //
+        // //repository
+        // repo = new sym.RepositoryFactoryHttp(NODE);
+        // accountRepo = repo.createAccountRepository();
+        // txRepo = repo.createTransactionRepository();
+        // tsRepo = repo.createTransactionStatusRepository();
+        // receiptRepo = repo.createReceiptRepository();
+        // nwRepo = repo.createNetworkRepository();
+        // blockRepo = repo.createBlockRepository();
+        // chainRepo = repo.createChainRepository();
+        // nodeRepo = repo.createNodeRepository();
+        // finRepo = repo.createFinalizationRepository();
+        // nsRepo = repo.createNamespaceRepository();
+        // metaRepo = repo.createMetadataRepository();
+        // mosaicRepo = repo.createMosaicRepository();
+        // msigRepo = repo.createMultisigRepository();
+        // hlRepo = repo.createHashLockRepository();
+        // slRepo = repo.createSecretLockRepository();
+        // resAccountRepo = repo.createRestrictionAccountRepository();
+        // resMosaicRepo = repo.createRestrictionMosaicRepository();
+        //
+        // //properties
+        // (async() =>{
+        //     epochAdjustment = await repo.getEpochAdjustment().toPromise();
+        //     generationHash = await repo.getGenerationHash().toPromise();
+        //     currencyId = (await repo.getCurrencies().toPromise()).currency.mosaicId.toHex();
+        //     networkCurrency = (await repo.getCurrencies().toPromise()).currency;
+        //     networkType = await repo.getNetworkType().toPromise();
+        //     transactionFees = await nwRepo.getTransactionFees().toPromise();
+        //     averageFeeMultiplier = transactionFees.averageFeeMultiplier;
+        //     medianFeeMultiplier = transactionFees.medianFeeMultiplier;
+        //     minFeeMultiplier = transactionFees.minFeeMultiplier;
+        // })();
+        //
+        // //service
+        // transactionService = new sym.TransactionService(txRepo, receiptRepo);
+        // stateProofService = new sym.StateProofService(repo);
+        // metaService = new sym.MetadataTransactionService(metaRepo);
+        // mosaicResService = new sym.MosaicRestrictionTransactionService(resMosaicRepo,nsRepo)
+        //
+        // //listener
+        // wsEndpoint = NODE.replace('http', 'ws') + "/ws";
+        // listener = new sym.Listener(wsEndpoint,nsRepo,WebSocket);
     </script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>

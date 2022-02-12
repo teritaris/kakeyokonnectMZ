@@ -16,5 +16,5 @@ var $plugins =
 {"name":"CommonInterceptor","status":true,"description":"割り込みコモンイベントプラグイン","parameters":{"ニューゲームコモン":"11","ロードコモン":"12","メニューコモン":"0"}},
 {"name":"TMNamePop2","status":true,"description":"イベントの頭上に文字列を表示する機能を追加します。","parameters":{"backOpacity":"96","fontSize":"20","outlineWidth":"4","outlineColor":"rgba(0, 0, 0, 0.5)","width":"160","roundRectRadius":"6"}},
 {"name":"MVJoint","status":false,"description":"ツクールMZ上でMVのプラグインを無理やり動かします。","parameters":{}},
-{"name":"hyperLink","status":false,"description":"ゲーム中に外部ページへのリンクを貼ります。","parameters":{"description":"Webサイトへのリンク"}}
+{"name":"hyperLink","status":true,"description":"ゲーム中に外部ページへのリンクを貼ります。","parameters":{"description":"Webサイトへのリンク"}}
 ];

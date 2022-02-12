@@ -157,7 +157,6 @@
 
 (() => {
     'use strict';
-
     /**
      * PluginParam
      */
