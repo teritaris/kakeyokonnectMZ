@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"町２","order":47,"parentId":0,"scrollX":579,"scrollY":1359},
+{"id":1,"expanded":false,"name":"町２","order":47,"parentId":0,"scrollX":789.5,"scrollY":1355},
 {"id":2,"expanded":false,"name":"村１","order":6,"parentId":0,"scrollX":820,"scrollY":801.5},
 {"id":3,"expanded":false,"name":"民家１","order":7,"parentId":2,"scrollX":451,"scrollY":312},
 {"id":4,"expanded":false,"name":"民家２","order":8,"parentId":2,"scrollX":431.5,"scrollY":329},
