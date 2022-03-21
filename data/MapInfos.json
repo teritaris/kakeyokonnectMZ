@@ -146,7 +146,7 @@ null,
 {"id":144,"expanded":false,"name":"森内部５ハード","order":123,"parentId":130,"scrollX":1580,"scrollY":1776.5},
 {"id":145,"expanded":true,"name":"森６ハード","order":124,"parentId":130,"scrollX":530,"scrollY":1034.5},
 {"id":146,"expanded":false,"name":"民家１","order":125,"parentId":145,"scrollX":521,"scrollY":383.5},
-{"id":147,"expanded":true,"name":"森８ハード","order":127,"parentId":79,"scrollX":795,"scrollY":669.5},
+{"id":147,"expanded":true,"name":"森８ハード","order":127,"parentId":79,"scrollX":626,"scrollY":647.5},
 {"id":148,"expanded":false,"name":"森７ハード","order":126,"parentId":79,"scrollX":816,"scrollY":640.5},
 {"id":149,"expanded":false,"name":"廃墟の民家","order":128,"parentId":147,"scrollX":521,"scrollY":391.5},
 {"id":150,"expanded":false,"name":"森９ハード","order":129,"parentId":79,"scrollX":521,"scrollY":391.5}
