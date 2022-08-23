@@ -1871,7 +1871,7 @@
                             let resultCoin = Math.floor(this._betCoin * this.getModeMagni() * this.getRoleMagni());
 
                             console.log("WIN!!");
-                            transferTransaction(resultCoin);
+                            payoutWinReward(resultCoin);
 
                             if (TatsuBlackJackGameP.winMessage1.trim() != "") {
                                 outputMsg = TatsuBlackJackGameP.winMessage1.replace("%d",resultCoin)+"\n";
@@ -2186,14 +2186,7 @@
         setBetCoin(betCoin){
             this._betCoin = betCoin;
             this.refresh();
-
-            console.log("do fetch")
-            const playerAddress = 'TCW5Z7YV6ZS7SIQ3ZRJMUNGUCQ6WYXNYXKV4WCY';
-            const amount = betCoin;
-            console.log(playerAddress);
-            console.log(amount);
-            const type = $gameVariables.value(39);
-            fetch(`http://localhost:3000/v1/mosaic-revocation/game-coin?address=${playerAddress}&amount=${amount}&type=${type}`);
+            revokeBetCoin(betCoin)
         };
 
         setMyHandLength(myHandLength){
@@ -2393,44 +2386,20 @@
 
     };
 
-    const transferTransaction = (resultCoin) => {
-        console.log("transferTransaction IN")
-        // symbol-sdkの読み込み
-        const symbol = require("/node_modules/symbol-sdk");
-        // トランザクションを送るノードの設定
-        const NODE_URL = 'https://sym-test-01.opening-line.jp:3001';
-        // テストネットを使うためのおまじない
-        const GENERATION_HASH = '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836';
-        const EPOCH_ADJUSTMENT = 1637848847;
-        const networkType = symbol.NetworkType.TEST_NET;
+    // ゲームコイン回収トランザクション
+    const revokeBetCoin = (amount) => {
+        const type = $gameVariables.value(39);
+        const domain = $gameVariables.value(38);
+        const playerAddress = $gameVariables.value(45);
+        fetch(`${domain}/v1/mosaic-revocation/game-coin?address=${playerAddress}&amount=${amount}&type=${type}`);
+    }
 
-        // 送信元アカウントの秘密鍵
-        const privateKey = "EE59AE723F6DC1BF4192997AC4D8FA2B0BBE015840ED8810AF8F2764E6D125D7";
-        // 秘密鍵からアカウント情報の読み込み
-        const account = symbol.Account.createFromPrivateKey(privateKey, networkType);
-
-        const playerAddress = $gameVariables.value(2)
-
-        // トランザクション作成
-        let tx = symbol.TransferTransaction.create(
-            symbol.Deadline.create(EPOCH_ADJUSTMENT), // おまじない
-            symbol.Address.createFromRawAddress("TCW5Z7YV6ZS7SIQ3ZRJMUNGUCQ6WYXNYXKV4WCY"), // 送信先アドレス
-            // symbol.Address.createFromRawAddress(playerAddress), // 送信先アドレス
-            [new symbol.Mosaic(new symbol.MosaicId('3A8416DB2D53B6C8'), symbol.UInt64.fromUint(resultCoin * 1000000))], // symbol.xymのモザイクIDと送信数量
-            symbol.PlainMessage.create("WIN REWARD"), // メッセージ
-            networkType, // テストネットを使う宣言
-            symbol.UInt64.fromUint(1000000) // 手数料設定
-        );
-        // 署名
-        let signedTx = account.sign(tx, GENERATION_HASH);
-        // 送信
-        new symbol.TransactionHttp(NODE_URL)
-            .announce(signedTx)
-            .subscribe((x) => console.log(x), (err) => console.error(err))
-
-        console.log(tx)
-        console.log(signedTx)
-
-    } 
+    // 勝利報酬払い出しトランザクション
+    const payoutWinReward = (amount) => {
+        const type = $gameVariables.value(39);
+        const domain = $gameVariables.value(38);
+        const playerAddress = $gameVariables.value(45);
+        fetch(`${domain}/v1/mosaic-transfer/game-coin?address=${playerAddress}&amount=${amount}&type=${type}`);
+    }
 
 })();
