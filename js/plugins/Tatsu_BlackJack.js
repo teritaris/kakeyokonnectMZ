@@ -2392,14 +2392,17 @@
         const domain = $gameVariables.value(38);
         const playerAddress = $gameVariables.value(45);
         fetch(`${domain}/v1/mosaic-revocation/game-coin?address=${playerAddress}&amount=${amount}&type=${type}`);
+        console.log("bet")
     }
 
     // 勝利報酬払い出しトランザクション
     const payoutWinReward = (amount) => {
         const type = $gameVariables.value(39);
         const domain = $gameVariables.value(38);
-        const playerAddress = $gameVariables.value(45);
+        // const playerAddress = $gameVariables.value(45);
+        let playerAddress = window.SSS.activeAddress;
         fetch(`${domain}/v1/mosaic-transfer/game-coin?address=${playerAddress}&amount=${amount}&type=${type}`);
+        console.log("reward")
     }
 
 })();
