@@ -3,6 +3,7 @@
 var $plugins =
 [
 {"name":"PluginCommonBase","status":true,"description":"パラメータ解析を提供する共通基盤です","parameters":{}},
+{"name":"CustomizeConfigDefault","status":true,"description":"オプションデフォルト値設定プラグイン","parameters":{"AlwaysDash":"false","CommandRemember":"false","TouchUi":"true","BgmVolume":"10","BgsVolume":"10","MeVolume":"10","SeVolume":"10","EraseAlwaysDash":"false","EraseCommandRemember":"false","EraseTouchUi":"false","EraseBgmVolume":"false","EraseBgsVolume":"false","EraseMeVolume":"false","EraseSeVolume":"false"}},
 {"name":"OnlineAvatar","status":true,"description":"Firebaseを使ってプレイヤーをオンライン同期します。","parameters":{"apiKey":"AIzaSyChwbgLFJFYBdpf-qeWPLEV_PQZXHaXlpw","authDomain":"rpgcreation-70a80.firebaseapp.com","databaseURL":"https://rpgcreation-70a80-default-rtdb.firebaseio.com","avatarEvent":"1","syncSwitchStart":"11","syncSwitchEnd":"20","syncVariableStart":"11","syncVariableEnd":"20"}},
 {"name":"111_InputForm","status":true,"description":"フォーム作って文字入力（修正版）","parameters":{}},
 {"name":"TMNamePop","status":true,"description":"イベントの頭上に文字列を表示する機能を追加します。","parameters":{"backOpacity":"96","fontSize":"20","outlineWidth":"4","outlineColor":"rgba(0, 0, 0, 0.5)","width":"160","roundRectRadius":"6"}},
