@@ -75,7 +75,7 @@
  * @param betCoinList
  * @desc コインを使用する場合、コインの使用枚数
  * @type Number[]
- * @default ["10","50","100"]
+ * @default ["1","10","100"]
  * 
  * @param winSe
  * @desc 勝負に勝った時の効果音
